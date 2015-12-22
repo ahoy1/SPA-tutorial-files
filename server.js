@@ -20,4 +20,26 @@ app.use(bodyParser());
 //this is a dev-only setting
 app.use(morgan('dev'));
 
+//express controllers are functions that take a request object + a response obj
+//
+//controller for GET requests
+var controllers = {
+	base: {
+		//sends a welcome message in JSON format
+		//remember, we only want to return JSON 
+		index: function(req, res) {
+			res.send({welcome: 'My Bookmarks API v1.0'});
+		}
+	}
+}
+app.get('/api', controllers.base.index);
+
+//server requires some parameters, a port on which the server will listen
+//and a host IP
+
+var port = process.env.PORT || 9125;
+var host = process.env.HOST || '0.0.0.0';
+var server = app.listen(port, host, function () {
+  console.log('Example app listening at http://%s:%s', host, port)
+});
 
