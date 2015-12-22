@@ -1,0 +1,26 @@
+{
+  "name": "my-bookmarks",
+  "version": "1.0.3",
+  "description": "Example of single-page application that you can easily deploy and share",
+  "main": "server.js",
+  "scripts": {
+    "build": "cd client && npm run-script build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankrousseau/shareable-app"
+  },
+  "author": "Cozy Cloud",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.12.2", 
+    "express": "4.12.3", 
+    "express-error-handler": "1.0.1", 
+    "method-override": "2.3.2", 
+    "morgan": "1.5.2", 
+    "path-extra": "1.0.2", 
+    "pouchdb": "3.3.1", 
+    "leveldown": "1.4.2", 
+    "slug": "0.8.0" 
+  }
+}
